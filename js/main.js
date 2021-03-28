@@ -74,7 +74,6 @@ function getCountry(obj) {
         let flagImg = document.createElement("img");
         flagImg.src = `${obj[i].flag}`;
         flagImg.alt = "flag";
-        flagImg.loading = "lazy";
         flagImg.style.width = "100%"
         flagImg.style.height = "100%";
         flagDiv.appendChild(flagImg);
