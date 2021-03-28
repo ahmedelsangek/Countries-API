@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: $veryDarkBlueDarkModeBackground;
+  color: white;
+  letter-spacing: 0.5px;
+  transition: background-color 0.4s ease-in-out;
+}
+.container {
+  margin: auto;
+}
+
+h2,
+h3,
+h4 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 300;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 375px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1280px;
+  }
+}

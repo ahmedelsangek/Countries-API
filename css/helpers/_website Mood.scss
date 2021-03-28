@@ -1,0 +1,60 @@
+body {
+  &.light-mood {
+    background-color: $whiteDarkModeTextandLightModeElements;
+    color: black;
+    .navbar {
+      background-color: $veryLightGrayLightModeBackground;
+      box-shadow: 17px -11px 20px;
+      .material-icons {
+        color: black !important;
+      }
+    }
+    .layout {
+      .search {
+        .material-icons {
+          color: $darkGrayLightModeInput !important;
+        }
+        input {
+          background-color: $veryLightGrayLightModeBackground !important;
+          box-shadow: 0px 0px 4px 0px #00000052;
+          color: black !important;
+        }
+      }
+      .filter {
+        div {
+          background-color: $veryLightGrayLightModeBackground !important;
+          color: $darkGrayLightModeInput !important;
+          box-shadow: 0px 0px 4px 0px #00000052;
+          &:first-of-type {
+            &:hover {
+              color: black !important;
+            }
+          }
+          span {
+            &:hover {
+              color: black !important;
+            }
+          }
+        }
+      }
+      .country-slide {
+        .country {
+          background-color: $veryLightGrayLightModeBackground !important;
+          box-shadow: 0px 0px 4px 0px #00000052;
+        }
+      }
+      .country-more-details {
+        button {
+          background: $veryLightGrayLightModeBackground;
+          color: black;
+        }
+        .border-countries {
+          span {
+            background-color: $veryLightGrayLightModeBackground !important;
+            color: black !important;
+          }
+        }
+      }
+    }
+  }
+}
