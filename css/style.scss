@@ -152,7 +152,8 @@
         height: 335px;
         border-radius: 7px;
         background-color: $darkBlueDarkModeElements;
-        margin-bottom: 45px;
+        margin-bottom: 75px;
+        box-shadow: 0px 0px 0px 15px #0000001f;
         cursor: pointer;
         &:hover {
           &::marker {
