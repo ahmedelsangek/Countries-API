@@ -40,7 +40,7 @@ let BorderCountries = document.querySelector(".border-countries");
 //Handle Api Url
 function HandleApi() {
     let myRequest = new XMLHttpRequest();
-    myRequest.onreadystatechange = function() {
+    myRequest.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             let countriesObject = JSON.parse(this.responseText);
 
@@ -59,14 +59,14 @@ function HandleApi() {
 HandleApi();
 
 function getCountry(obj) {
-    for(let i = 0; i < obj.length; i++) {
+    for (let i = 0; i < obj.length; i++) {
         //Create Country Slide
         let countryDiv = document.createElement("div");
         countryDiv.className = "country";
-        countryDiv.setAttribute("data-country",`${obj[i].name}`);
-        countryDiv.setAttribute("data-region",`${obj[i].region}`);
-        countryDiv.setAttribute("data-index",`${[i]}`);
-        countryDiv.setAttribute("title","Click For More Details");
+        countryDiv.setAttribute("data-country", `${obj[i].name}`);
+        countryDiv.setAttribute("data-region", `${obj[i].region}`);
+        countryDiv.setAttribute("data-index", `${[i]}`);
+        countryDiv.setAttribute("title", "Click For More Details");
 
         //Create Country Image Div
         let flagDiv = document.createElement("div");
@@ -135,7 +135,7 @@ function filterCountriesByRegion() {
                 country.style.display = "none";
                 if (country.dataset.region === region.innerHTML) {
                     country.style.display = "block";
-                } else if(region.innerHTML === "All Region") {
+                } else if (region.innerHTML === "All Region") {
                     country.style.display = "block";
                 }
             });
@@ -146,7 +146,7 @@ function filterCountriesByRegion() {
 //Search On Country
 function searchCountry() {
     searchInput.addEventListener("keyup", () => {
-        let filter =  searchInput.value.toLowerCase()
+        let filter = searchInput.value.toLowerCase()
         allCountry.forEach(country => {
             country.style.display = "none";
             if (country.dataset.country.toLowerCase().includes(filter)) {
@@ -165,7 +165,7 @@ function countryDetails(obj) {
             layoutFilterInfo.style.display = "none";
             countryMoreDetails.style.display = "block";
             let countryIndex = country.dataset.index;
-            
+
             bigFlagImage.src = `${obj[countryIndex].flag}`;
             countryDetailsName.innerHTML = `${obj[countryIndex].name}`;
             countryDetailsNative.innerHTML = `Native Name: <span>${obj[countryIndex].nativeName}</span>`;
@@ -176,8 +176,10 @@ function countryDetails(obj) {
             countryDetailsDomain.innerHTML = `Top Level Domain: <span>${obj[countryIndex].topLevelDomain}</span>`;
             countryDetailsCurrencies.innerHTML = `Currencies: <span>${obj[countryIndex].currencies[0].name}</span>`;
             countryDetailsLanguages.innerHTML = `Languages: <span>${obj[countryIndex].languages[0].name}</span>`;
-            
-            BorderCountries.innerHTML = "Border Countries: ";
+
+
+
+            // BorderCountries.innerHTML = "Border Countries: ";
             for (let i = 0; i < obj[countryIndex].borders.length; i++) {
                 let borderSpan = document.createElement("span");
                 borderSpan.innerHTML += `${obj[countryIndex].borders[i]}`;
